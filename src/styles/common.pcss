@@ -1,0 +1,76 @@
+@import "./base.pcss";
+
+html, body {
+    user-select: none;
+//scroll-behavior: smooth; -webkit-overflow-scrolling: touch; background: #fff;
+}
+
+a {
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+img {
+    content: normal !important;
+    vertical-align: middle;
+}
+
+.image-cant-touch {
+    pointer-events: none;
+}
+
+var {
+    font-style: normal;
+}
+
+.hidden {
+    display: none;
+}
+
+.van-dialog__footer {
+    & .van-button {
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+    }
+}
+
+.van-button {
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
+}
+
+.van-button--primary {
+    background: linear-gradient(to left, #5c78eb 0%, #54b8f4 100%) !important;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.van-button--large {
+    height: 45px;
+    line-height: 45px;
+    font-size: 15px;
+}
+
+.van-button--primary.van-button--plain {
+    background: #fff !important;
+    color: #5995EF;
+    border: 1px solid #5995EF;
+    box-sizing: border-box;
+}
+
+.van-toast--default .van-toast__text {
+    text-align: center;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
