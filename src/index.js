@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./styles/base.pcss";
 import "./styles/common.pcss";
 import "normalize.css";
 import App from "./views/App";
