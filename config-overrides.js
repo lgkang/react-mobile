@@ -1,4 +1,4 @@
-const {override, addPostcssPlugins, addDecoratorsLegacy, addWebpackAlias} = require("customize-cra");
+const {override, addPostcssPlugins, addDecoratorsLegacy, addWebpackAlias, fixBabelImports} = require("customize-cra");
 const postcss = require("./postcss.config.js");
 const path = require("path");
 // postcss 配置项
@@ -8,5 +8,9 @@ module.exports = override(
         "@": path.resolve(__dirname, "src"),
     }),
     addPostcssPlugins(postcssPlugin),
-    addDecoratorsLegacy()
+    addDecoratorsLegacy(),
+    fixBabelImports("import", {
+        libraryName: "antd-mobile",
+        style: "css",
+    })
 );
